@@ -10,7 +10,9 @@ object Formatter {
   def formatFiles(files: Iterable[VirtualFile], preferences: IFormattingPreferences): Unit = {
     val docManager = FileDocumentManager.getInstance()
 
-    files.filter(_.getExtension.toLowerCase == "scala")
+    files
+      .filter(_.isWritable)
+      .filter(_.getExtension.toLowerCase == "scala")
       .foreach { file =>
         Option(docManager.getDocument(file)).foreach{ document =>
           val source = document.getText()
