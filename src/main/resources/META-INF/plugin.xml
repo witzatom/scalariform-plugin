@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>ai.blindspot.intellij.ScalariformFormatter</id>
+    <name>Scalariform Formatter</name>
+    <version>0.1</version>
+    <vendor email="tomas.witzany@blindspot.ai" url="https://blindspot.ai">Tomas Witzany</vendor>
+
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <checkinHandlerFactory
+                implementation="ai.blindspot.intellij.ScalariformReformatCheckinFactory" order="last"/>
+    </extensions>
+
+
+    <actions>
+        <action id="ScalariformIdea.FormatChangedAction" class="ai.blindspot.intellij.FormatChangedAction"
+                text="Format changed files with Scalariform" description="Format changed files with Scalariform">
+            <add-to-group group-id="CodeFormatGroup" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift S"/>
+        </action>
+        <action id="ScalariformIdea.FormatAllAction" class="ai.blindspot.intellij.FormatAllAction"
+                text="Format project files with Scalariform" description="Format all project files with Scalariform">
+            <add-to-group group-id="CodeFormatGroup" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift D"/>
+        </action>
+    </actions>
+
+</idea-plugin>
