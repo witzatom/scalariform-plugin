@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>ai.blindspot.intellij.ScalariformFormatter</id>
     <name>Scalariform Formatter</name>
-    <version>0.1</version>
+    <version>0.1.1</version>
     <vendor email="tomas.witzany@blindspot.ai" url="https://blindspot.ai">Tomas Witzany</vendor>
 
     <depends>com.intellij.modules.lang</depends>
