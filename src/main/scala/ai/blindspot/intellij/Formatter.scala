@@ -12,7 +12,7 @@ object Formatter {
 
     files
       .filter(_.isWritable)
-      .filter(_.getExtension.toLowerCase == "scala")
+      .filter(vf => Option(vf.getExtension).exists(_.toLowerCase == "scala"))
       .foreach { file =>
         Option(docManager.getDocument(file)).foreach{ document =>
           val source = document.getText()
