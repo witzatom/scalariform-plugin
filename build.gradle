@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'ai.blindspot'
-version '0.1.1'
+version '0.1.2'
 
 apply plugin: 'scala'
 
@@ -24,8 +24,10 @@ intellij {
 
 patchPluginXml {
     sinceBuild '173.0'
-    untilBuild '192.*'
+    untilBuild '202.*'
     pluginDescription 'A plugin for formatting using a scalariform configuration file'
     changeNotes """
-      Created plugin.<br>"""
+      Created plugin.<br/>
+      Updated version to 202.<br/>
+      """
 }
