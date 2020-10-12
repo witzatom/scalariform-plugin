@@ -1,7 +1,7 @@
 Scalariform IntelliJ IDEA plugin
 ================================
 
-This plugin adds a menu item that allows you to format all project files, or files in current changeset using Scalariform.
+This plugin [IJ Marketplace link](https://plugins.jetbrains.com/plugin/12996-scalariform-formatter) adds a menu item that allows you to format all project files, or files in current changeset using Scalariform.
 
 After installing the plugin, configure the plugin by adding a .scalariform.conf file to your project root directory. Check the deafault options [here](https://github.com/Tommassino/scalariform-plugin/blob/master/.scalariform.conf).
 
